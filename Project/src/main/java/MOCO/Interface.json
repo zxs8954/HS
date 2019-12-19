@@ -1,0 +1,70 @@
+[
+  {
+    "request": {
+      "uri": "/getCookies",
+      "method": "get",
+      "queries": {
+        "name": "zxs",
+        "age": "27"
+      },
+      "headers": {
+        "content-type": "application/json"
+      }
+    },
+    "response": {
+      "status": "200",
+      "text": "获取信息成功",
+      "cookies": {
+        "createTime": "19930606"
+      },
+      "headers": {
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+
+
+  {
+    "request": {
+      "uri": "/Login",
+      "method": "post",
+      "json": {
+        "name": "zxs",
+        "password": "zxs123.."
+      },
+      "cookies": {
+        "createTime": "19930606"
+      }
+  },
+    "response": {
+      "status": "200",
+      "json": {
+        "userID": "9527",
+        "text": "登录成功"
+      }
+    }
+  },
+
+  {
+    "request": {
+      "uri": "/pay",
+      "method": "post",
+      "json": {
+        "userID": "9527",
+        "count": "30$"
+      },
+      "cookies": {
+        "createTime": "19930606"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+          "status": "200",
+        "goods": "机械键盘",
+        "user": "9527",
+        "count": "30$"
+      }
+    }
+  }
+]
