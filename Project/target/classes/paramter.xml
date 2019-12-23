@@ -2,11 +2,9 @@
 <suite name="param">
     <test name="param">
         <classes>
-
             <parameter name="name" value="张雪松"/>
             <parameter name="age" value="27"/>
-<!--            <class name="com.course.testng.paramter.ParamTest"/>-->
-            <class name="com.course.testng.DataProviderRetest"/>
+            <class name="com.course.testng.paramter.ParamTest"/>
         </classes>
     </test>
 
