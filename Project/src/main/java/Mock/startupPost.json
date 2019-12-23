@@ -1,0 +1,19 @@
+[
+
+  {
+    "request": {
+      "uri": "/postDemo",
+      "method": "post",
+      "forms": {
+        "name": "zxs",
+        "age": "27"
+      }
+    },
+    "response": {
+      "text": "我来了",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
+    }
+  }
+]

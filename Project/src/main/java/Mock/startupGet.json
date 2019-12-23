@@ -1,0 +1,31 @@
+[
+  {
+    "description": "没有参数的get请求",
+    "request": {
+      "uri": "/getDemo",
+      "method": "get"
+    },
+    "response": {
+      "text": "没参数的get请求",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "request": {
+      "uri": "/getParam",
+      "method": "get",
+      "queries":{
+        "name": "zxs",
+        "age": "27"
+      }
+    },
+    "response": {
+      "text": "返回",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
+    }
+  }
+]

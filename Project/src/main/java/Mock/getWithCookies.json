@@ -1,0 +1,36 @@
+[
+
+  {
+    "request": {
+      "uri": "/getWithCookies",
+      "method": "get",
+      "cookies": {
+        "login": "true",
+        "name": "zxs"
+      }
+    },
+    "response": {
+      "text": "with cookie"
+    }
+  },
+  {
+    "request": {
+      "uri": "/postWithCookies",
+      "method": "post",
+      "cookies": {
+        "name": "zxs"
+      },
+      "json": {
+        "name":"huhansan",
+        "age": "18"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "huhan": "success",
+        "status": 1
+      }
+    }
+  }
+]

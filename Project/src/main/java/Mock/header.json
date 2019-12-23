@@ -1,0 +1,21 @@
+[
+  {
+    "request": {
+        "uri": "/post/with/headers",
+      "method": "post",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "name": "zhuang",
+        "sex":"man"
+      }
+    },
+    "response": {
+      "json": {
+        "wanglaosi": "success",
+        "status": 2
+      }
+    }
+  }
+]

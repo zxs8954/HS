@@ -60,7 +60,7 @@
     "response": {
       "status": "200",
       "json": {
-          "status": "200",
+        "status": "200",
         "goods": "机械键盘",
         "user": "9527",
         "count": "30$"
