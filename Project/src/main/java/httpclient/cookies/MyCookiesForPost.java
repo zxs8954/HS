@@ -28,14 +28,14 @@ public class MyCookiesForPost {
     @BeforeTest
     public void beforeTest() {
         bundle = ResourceBundle.getBundle("application", Locale.CHINA);
-        url = bundle.getString("test.url");
+        url = bundle.getString("url");
 
     }
 
     @Test
     public void testGetCookies() throws IOException {
         String result;
-        String uri = bundle.getString("getCookies.uri");
+        String uri = bundle.getString("getUri");
         String testUrl = this.url + uri;
         HttpGet get = new HttpGet(testUrl);
         DefaultHttpClient client = new DefaultHttpClient();
@@ -56,7 +56,7 @@ public class MyCookiesForPost {
 
     @Test(dependsOnMethods = {"testGetCookies"})
     public void testPostMethod() throws IOException {
-        String uri = bundle.getString("postWithCookies");
+        String uri = bundle.getString("postUri");
         //最终测试地址
         String testUrl = this.url + uri;
 
