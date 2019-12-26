@@ -35,7 +35,7 @@ public class MyCookiesForPost {
     @Test
     public void testGetCookies() throws IOException {
         String result;
-        String uri = bundle.getString("getUri");
+        String uri = bundle.getString("getCookies");
         String testUrl = this.url + uri;
         HttpGet get = new HttpGet(testUrl);
         DefaultHttpClient client = new DefaultHttpClient();
@@ -94,8 +94,5 @@ public class MyCookiesForPost {
         Assert.assertEquals("success1",success);
         Assert.assertEquals("12",status);
         //处理结果，判断返回结果是否符合预期
-
-
-
     }
 }

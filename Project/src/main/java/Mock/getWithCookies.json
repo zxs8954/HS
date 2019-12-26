@@ -9,7 +9,10 @@
       }
     },
     "response": {
-      "text": "with cookie"
+      "text": "携带cookie请求成功",
+      "headers": {
+        "Content-Type":"text/html;charset=gbk"
+      }
     }
   },
   {
@@ -29,10 +32,10 @@
     },
     "response": {
       "json": {
-        "huhan": "success1",
-        "status": "12"
+        "name": "胡汉三",
+        "age": "十二岁"
       }
-    }
+  }
   },
   {
     "request": {
@@ -48,6 +51,23 @@
         "content-type": "text/html;charset=gbk"
       }
 
+    }
+  },
+  {
+    "request": {
+      "uri": "/getParam",
+      "method": "get",
+      "queries":{
+        "name": "zxs",
+        "age": "27",
+        "address": "xiaoshan"
+      }
+    },
+    "response": {
+      "text": "带参数的get请求",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
     }
   }
 ]
