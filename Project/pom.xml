@@ -37,16 +37,23 @@
             <version>4.5.10</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> 78fc8ad1e3442304a89431818e46b8be957cfab3
             <groupId>com.relevantcodes</groupId>
             <artifactId>extentreports</artifactId>
             <version>2.41.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
         <dependency>
             <groupId>com.vimalselvam</groupId>
             <artifactId>testng-extentsreport</artifactId>
@@ -57,6 +64,14 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>3.0.6</version>
+<<<<<<< HEAD
+=======
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20170516</version>
+>>>>>>> 78fc8ad1e3442304a89431818e46b8be957cfab3
         </dependency>
     </dependencies>
 </project>
