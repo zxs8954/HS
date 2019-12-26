@@ -13,7 +13,7 @@
     },
     "response": {
       "status": "200",
-      "text": "获取信息成功",
+      "text": "abcdefg",
       "cookies": {
         "createTime": "19930606"
       },
@@ -28,7 +28,7 @@
     "request": {
       "uri": "/Login",
       "method": "post",
-      "json": {
+      "forms": {
         "name": "zxs",
         "password": "zxs123.."
       },
