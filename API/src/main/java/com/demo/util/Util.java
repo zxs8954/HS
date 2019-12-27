@@ -7,6 +7,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Util {
     public HttpClient httpClient(){
@@ -19,7 +21,18 @@ public class Util {
     }
     public String getResult(HttpResponse response) throws IOException {
         String result;
-        result=EntityUtils.toString(response.getEntity());
+        result=EntityUtils.toString(response.getEntity(),"utf-8");
         return result;
+    }
+    // 处理unicode 转中文工具类，直接粘贴就好
+    public String unicodeDecode(String string) {
+        Pattern pattern = Pattern.compile("(\\\\u(\\p{XDigit}{4}))");
+        Matcher matcher = pattern.matcher(string);
+        char ch;
+        while (matcher.find()) {
+            ch = (char) Integer.parseInt(matcher.group(2), 16);
+            string = string.replace(matcher.group(1), ch + "");
+        }
+        return string;
     }
 }
