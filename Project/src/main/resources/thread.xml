@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<suite name="thread" parallel="methods" thread-count="2">
-<!--    xml文件不能指定线程池，只有方法级别的测试才可以指定线程池-->
-    <test name="demo1">
-        <classes>
-            <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
-        </classes>
-    </test>
-</suite>
