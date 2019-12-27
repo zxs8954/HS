@@ -37,4 +37,5 @@ public class MyGetMethod {
 
         return "你必须携带cookies信息来";
     }
+
 }
