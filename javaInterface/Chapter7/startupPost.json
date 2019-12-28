@@ -1,0 +1,27 @@
+[
+  {
+    "description":"moco a post request",
+    "request":{
+      "uri":"/postdemo",
+      "method":"post"
+    },
+    "response":{
+      "text":"first moco post"
+    }
+  },
+  {
+    "description":"moco a post request with parameter",
+    "request":{
+      "uri":"/postwithparam",
+      "method":"post",
+      "forms":{
+        "name":"zhangsan",
+        "age":"10"
+      }
+    },
+    "response":{
+      "text":"moco post with parameter response"
+
+    }
+  }
+]

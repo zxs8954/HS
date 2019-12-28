@@ -1,0 +1,49 @@
+[
+  {"description":"返回信息中携带cookies",
+    "request":{
+      "uri":"/getCookies",
+      "method":"get"
+    },
+    "response":{
+      "cookies":{
+        "login":"true"
+      },
+      "text":"获取cookies成功"
+    }
+  },
+  {
+    "description":"get request with cookies",
+    "request":{
+      "uri":"/get/with/cookies",
+      "method":"get",
+      "cookies":{
+        "login":"true"
+      }
+    },
+    "response":{
+      "text":"get request whit cookies response"
+    }
+  },
+  {
+    "description":"post request with cookies",
+    "request":{
+      "uri":"/post/with/cookies",
+      "method":"post",
+      "cookies":{
+        "login":"true"
+      },
+      "json":{
+        "name":"zhangsan",
+        "age":"12"
+      }
+    },
+    "response":{
+      "status":200,
+      "json":{
+        "zhangsan":"success",
+        "name":"zhangsan",
+        "status":"1"
+      }
+    }
+  }
+]
