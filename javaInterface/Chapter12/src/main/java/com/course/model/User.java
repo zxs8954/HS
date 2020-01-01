@@ -1,5 +1,6 @@
 package com.course.model;
 
+
 import lombok.Data;
 
 @Data
@@ -13,15 +14,15 @@ public class User {
     private String isDelete;
 
     @Override
-    public String toString(){
+    public String toString() {
         return (
-                "{id"+id+","+
-                "userName"+userName+","+
-                "password"+password+","+
-                "age"+age+","+
-                "sex"+sex+","+
-                "permission"+permission+","+
-                "isDelete"+isDelete+"}"
-                );
+                "{" + "id" + id + "," +
+                        "userName" + userName + "," +
+                        "password" + password + "," +
+                        "age" + age + "," +
+                        "sex" + sex + "," +
+                        "permission" + permission + "," +
+                        "isDelete" + isDelete + "}"
+        );
     }
 }

@@ -43,6 +43,6 @@
     </test>
     <!--测试报告监听器-->
     <listeners>
-        <listener class-name="com.course.config.ExtentTestNGIReporterListener"></listener>
+        <listener class-name="com.course.config.ExtentTestNGIReporterListener"/>
     </listeners>
 </suite>

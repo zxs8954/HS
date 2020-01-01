@@ -24,7 +24,7 @@ public class UpdateUserInfoTest {
     @Test(dependsOnGroups = "loginTrue",description = "删除用户信息")
     public void deleteUser() throws IOException {
         SqlSession session= DatabaseUtil.getSqlSession();
-        UpdateUserInfoCase updateUserInfoCase=session.selectOne("updateUserInfoCase",1);
+        UpdateUserInfoCase updateUserInfoCase=session.selectOne("updateUserInfoCase",2);
         System.out.println(updateUserInfoCase.toString());
         System.out.println(TestConfig.updateUserInfoUrl);
 

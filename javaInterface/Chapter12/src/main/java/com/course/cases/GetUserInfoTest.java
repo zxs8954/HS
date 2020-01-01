@@ -1,5 +1,6 @@
 package com.course.cases;
 
+import com.course.config.TestConfig;
 import com.course.model.GetUserInfoCase;
 import com.course.utils.DatabaseUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -14,7 +15,7 @@ public class GetUserInfoTest {
         SqlSession session= DatabaseUtil.getSqlSession();
         GetUserInfoCase getUserInfoCase=session.selectOne("getUserInfoCase",1);
         System.out.println(getUserInfoCase.toString());
-        System.out.println();
+        System.out.println(TestConfig.getUserInfoUrl);
 
     }
 }

@@ -3,8 +3,8 @@
 
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n"/>
-<!--    <property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}"/>-->
-    <property name="LOG_PATH" value="/app/logs"/>
+    <property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}"/>
+
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<file>${LOG_PATH}/${LOG_FILE}</file>-->
         <file>${LOG_FILE}</file>
