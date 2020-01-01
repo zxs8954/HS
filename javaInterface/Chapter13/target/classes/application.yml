@@ -2,8 +2,8 @@ server:
   port: 8888
 
 logging:
-  path: logs
-  file: userManager.log
+  path: logsNew
+  file: userManagerNew.log
 
 spring:
   application:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/course?serverTimezone=GMT
     username: root
-    password: 123456
+    password: 123
 
 mybatis:
   type-aliases-package: com.course.model
