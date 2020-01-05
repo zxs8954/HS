@@ -11,6 +11,4 @@ public class AddUserCase {
     private String permission;
     private String isDelete;
     private String expected;
-
-
 }

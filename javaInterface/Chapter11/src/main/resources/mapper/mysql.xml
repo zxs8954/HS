@@ -10,12 +10,12 @@
     </select>
     <!--新增sql-->
     <insert id="addUser" parameterType="com.course.model.User">
-        insert into user(id,name,age,sex)
+        insert into user(id,userName,age,sex)
         values (#{id},#{name},#{age},#{sex})
     </insert>
     <!--修改sql-->
-    <update id="updataUser" parameterType="com.course.model.User">
-        update user set name=#{name},age=#{age}
+    <update id="updateUser" parameterType="com.course.model.User">
+        update user set userName=#{name},age=#{age}
         where id=#{id}
     </update>
     <!--删除sql-->

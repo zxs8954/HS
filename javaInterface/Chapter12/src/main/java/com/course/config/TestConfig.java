@@ -13,5 +13,4 @@ public class TestConfig {
 
     public static DefaultHttpClient defaultHttpClient;
     public static CookieStore store;
-
 }

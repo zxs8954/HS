@@ -9,7 +9,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Log4j2
+@Log4j
 @RestController
 @Api(value = "v1",description = "第一个版本的demo")
 @RequestMapping("v1")
@@ -29,10 +29,10 @@ public class Demo {
         return result;
     }
     //更新user表
-    @RequestMapping(value ="/updataUser" ,method = RequestMethod.POST)
-    public int updateUser(@RequestBody User user){
-        return template.update("updataUser",user);
-    }
+   @RequestMapping(value = "/updateUser",method =RequestMethod.POST)
+   public int updateUser(@RequestBody User user){
+        return template.update("updateUser",user);
+   }
     //删除user表中的记录
     @RequestMapping(value = "/deleteUser",method = RequestMethod.POST)
     public int deleteUser(@RequestParam int id){

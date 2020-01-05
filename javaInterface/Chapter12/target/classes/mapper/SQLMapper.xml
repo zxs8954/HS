@@ -25,7 +25,7 @@
 
     <!--更新 删除用户列表case-->
     <select id="updateUserInfoCase" parameterType="Integer" resultType="com.course.model.UpdateUserInfoCase">
-        select * from updataUserInfoCase where id =#{id};
+        select * from updateUserInfoCase where id =#{id};
     </select>
 
 </mapper>
