@@ -3,7 +3,9 @@ package com.course.controller;
 import com.course.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
+import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,13 +19,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Objects;
 
-@Log4j2
 @RestController
 @Api(value = "v1", description = "用户管理系统")//该注解是swagger里面的
 @RequestMapping("v1")
 public class UserManager {
     @Autowired
     private SqlSessionTemplate template;//获取一个执行sql语句的对象
+    private Logger log=Logger.getLogger(UserManager.class);
 
     /*
     登录接口
@@ -34,7 +36,7 @@ public class UserManager {
         int i = template.selectOne("login", user);
         Cookie cookie = new Cookie("login", "true");
 
-        log.info("查询到的结果是：" + i);
+       log.info("查询到的结果是：" + i);
         if (i == 1) {
             response.addCookie(cookie);
             log.info("登录用户是：" + user.getUserName());

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="用户管理系统测试套件">
+<suite name="用户管理系统测试套件" parallel="methods" thread-count="1">
     <test name="用户管理系统测试用例">
         <classes>
             <!--登录用例-->
@@ -10,7 +10,6 @@
                     <include name="loginFalse"></include>
                 </methods>
             </class>
-
             <!--增加用户用例-->
             <class name="com.course.cases.AddUserTest">
                 <methods>

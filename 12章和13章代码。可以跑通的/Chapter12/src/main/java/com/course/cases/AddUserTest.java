@@ -24,33 +24,32 @@ public class AddUserTest {
         System.out.println(addUserCase.toString());
         System.out.println(TestConfig.addUserUrl);
         //发请求获取结果
-        String result=getResult(addUserCase);
-        Thread.sleep(3000);
+        String result = getResult(addUserCase);
+        Thread.sleep(10000);
         //验证结果
-        User user=session.selectOne("addUser",addUserCase);
-        Thread.sleep(3000);
+        User user = session.selectOne("addUser", addUserCase);
         System.out.println(user.toString());
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(addUserCase.getExpected(), result);
     }
 
     private String getResult(AddUserCase addUserCase) throws IOException {
-        HttpPost post=new HttpPost(TestConfig.addUserUrl);
-        JSONObject param=new JSONObject();
-        param.put("userName",addUserCase.getUserName());
-        param.put("password",addUserCase.getPassword());
-        param.put("sex",addUserCase.getSex());
-        param.put("age",addUserCase.getAge());
-        param.put("permission",addUserCase.getPermission());
-        param.put("isDelete",addUserCase.getIsDelete());
-        post.setHeader("content-type","application/json");
-        StringEntity entity=new StringEntity(param.toString(),"utf-8");
+        HttpPost post = new HttpPost(TestConfig.addUserUrl);
+        JSONObject param = new JSONObject();
+        param.put("userName", addUserCase.getUserName());
+        param.put("password", addUserCase.getPassword());
+        param.put("sex", addUserCase.getSex());
+        param.put("age", addUserCase.getAge());
+        param.put("permission", addUserCase.getPermission());
+        param.put("isDelete", addUserCase.getIsDelete());
+        post.setHeader("content-type", "application/json");
+        StringEntity entity = new StringEntity(param.toString(), "utf-8");
         post.setEntity(entity);
         //设置cookies
         TestConfig.defaultHttpClient.setCookieStore(TestConfig.store);
         //存放返回结果
         String result;
-        HttpResponse response=TestConfig.defaultHttpClient.execute(post);
-        result= EntityUtils.toString(response.getEntity(),"utf-8");
+        HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+        result = EntityUtils.toString(response.getEntity(), "utf-8");
         System.out.println(result);
         return result;
     }
